@@ -7,31 +7,14 @@ font-family: 'Montserrat', sans-serif;
 font-family: 'Ubuntu', sans-serif;
 
 */
-
 /********************************** SELECTORS **********************************/
 body {
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 3.8rem;
-  font-weight: 900;
-  line-height: 4.1rem;;
-}
-
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.0rem;
-  font-weight: 400;
-  line-height: 3.3rem;
-}
-
-h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  line-height: 1.6rem;
 }
 
 p {
@@ -41,25 +24,49 @@ p {
 }
 
 /********************************** CLASS & ID SELECTORS PER PAGE STRUCTUREs **********************************/
-
-/* Title Section */
+/* Container Section */
 .container-fluid-nav {
   padding: 1% 15% 1%;
 }
 
 .container-fluid {
-  padding: 3% 15% 7%;
+  padding: 7% 15%;
 }
 
-#title {
-  background-color: #ff4c68;
-  color: #ffffff;
+#cta .container-fluid {
+  padding: 15% 15% 10%;
 }
+
+footer .container-fluid {
+  padding: 10% 15% 5%;
+}
+
+/* Sections */
+.colour-bg {
+  background-color: #ff4e68;
+  color: #fff;
+}
+
+.light-bg {
+  background-color: #fff;
+}
+
+/* Title Section */
+#title {
+  text-align: left;
+}
+
+/* See class 89 Advanced CSS - Combining Selectors.
+Other solution for "container-fluid-nav" Note: Since the container-fluid class is adding too much padding to the navbar, the solution to ONLY CHANGE the container-fluid class when in the #title section is to do the following:
+#title .container-fluid {
+  padding: 1% 15% 1%;
+}
+*/
 
 /* Naviagtion Bar */
 .navbar {
   background-color: #ff4c68;
-  opacity: 95%;
+  opacity: 0.90;
   padding: 2% 15%;
 }
 
@@ -79,9 +86,24 @@ p {
   font-weight: 300;
 }
 
+/* HEADINGS */
 /* Title Section, Heading Left Aligned */
 .title-col-lg-6 {
   padding: 0;
+}
+
+.big-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 4.1rem;
+  ;
+}
+
+.section-heading {
+  font-size: 3.0rem;
+  font-weight: 400;
+  line-height: 3.3rem;
 }
 
 /* Downlod Buttons */
@@ -91,18 +113,18 @@ p {
 
 /* Title Img */
 .zindex-b5 {
-  position: relative; /* Note: In bootstrap 5, the col classes don't have position: relative;. So you have to add it manually to the col div by adding a custom class, otherwise when you assign 60%, it will size it relative to the whole body of the website.*/
+  position: relative;
+  /* Note: In bootstrap 5, the col classes don't have position: relative;. So you have to add it manually to the col div by adding a custom class, otherwise when you assign 60%, it will size it relative to the whole body of the website.*/
 }
 
 .title-img {
   width: 60%;
   transform: rotate(25deg);
   position: absolute;
-  right:24%;
+  right: 24%;
 }
 
 @media (max-width: 1028px) {
-
   #title {
     text-align: center;
   }
@@ -111,15 +133,17 @@ p {
     position: static;
     transform: rotate(0);
   }
-
 }
 
 /* Features Section */
 #features {
-  text-align: center;
-  background-color: #fff;
-  padding: 7% 15%;
   position: relative;
+}
+
+.feature-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.6rem;
 }
 
 /* Features - Icons */
@@ -147,7 +171,6 @@ p {
   background-color: #ff4c68c7;
   font-family: 'Montserrat', sans-serif;
   color: #fff;
-  text-align: center;
 }
 
 .testimonial-img {
@@ -161,11 +184,16 @@ p {
   padding: 10% 15%;
 }
 
+.testimonial-text {
+  font-size: 3.0rem;
+  font-weight: 400;
+  line-height: 3.3rem;
+}
+
 /* Press Section */
 #press {
-  background-color: #ff4c68c7;
-  text-align: center;
-  padding: 0 15% 7% 15%;
+  background-color: #eee;
+  padding: 7% 14% 7% 14%;
 }
 
 .press-img {
@@ -179,34 +207,34 @@ p {
 #pricing {
   font-family: 'Montserrat', sans-serif;
   padding: 100px;
-  text-align: center;
 }
 
 .pricing-col {
   padding: 3% 2%;
 }
 
+.price-subtitle {
+  font-size: 3.0rem;
+  font-weight: 400;
+  line-height: 3.3rem;
+}
+
+.pricing-pckg-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.6rem;
+}
 
 /* CTA Section */
 #cta {
-  background-color: #ff4c68;
-  color: #fff;
   font-family: 'Montserrat', sans-serif;
-  padding: 7% 15%;
-  text-align: center;
-}
-
-.cta-heading {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 900;
-  line-height: 3.8rem;
 }
 
 /* Footer Section */
-#footer {
-  padding: 7% 15% 1%;
-  text-align: center;
+.footer-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.6rem;
 }
 
 .footer-icons {
@@ -218,6 +246,11 @@ p {
 
 .footer-icons:hover {
   color: #ff4c68;
+}
+
+.footer-legal {
+  background-color: #eee;
+  padding: 3% 15% 1%;
 }
 
 /* Spaces */
